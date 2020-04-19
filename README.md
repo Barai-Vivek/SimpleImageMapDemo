@@ -1,3 +1,4 @@
+![](ImageMapDemo.gif)
 # SimpleImageMapDemo
 This is a simple Image Map Demo.<br>
 This demo contains an example image which is a map.<br>
