@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SimpleImageMapDemo</string>
+    <string name="blink_location">Blink location multiple times</string>
+    <string-array name="locations">
+        <item>Show single location</item>
+        <item>Show multiple location</item>
+    </string-array>
+</resources>

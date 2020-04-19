@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <Switch
+        android:id="@+id/switchBlink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/blink_location"
+        android:layout_margin="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spnrLocationsToShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switchBlink"
+        android:minHeight="50dp"
+        android:entries="@array/locations"
+        android:padding="8dp"
+        android:spinnerMode="dropdown"/>
+
+    <com.app.simpleimagemapdemo.controls.ZoomLayoutViewInteractiveMap
+        android:id="@+id/ivZoomVIew"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/spnrLocationsToShow">
+
+        <FrameLayout
+            android:id="@+id/frameMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/backImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <!--for single location-->
+            <ImageView
+                android:id="@+id/topImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:alpha="0" />
+
+            <!--for multiple location-->
+            <ImageView
+                android:id="@+id/thirdImageFromLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:alpha="0" />
+
+        </FrameLayout>
+    </com.app.simpleimagemapdemo.controls.ZoomLayoutViewInteractiveMap>
+
+    <ProgressBar
+        android:id="@+id/pgrsBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="100dp"/>
+
+</RelativeLayout>
